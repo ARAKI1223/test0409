@@ -44,6 +44,7 @@ def app_ver1():
     # 描画
     ani = ArtistAnimation(fig, frames, interval=110-speed*10)
     components.html(ani.to_jshtml(), height=2000)
+    a = 1 + 1
 
 
 # Run the app
