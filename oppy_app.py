@@ -35,7 +35,7 @@ def app_ver1():
     # num_frames =
     st.sidebar.text("あなたは18歳以上ですか？")
     R18_flag = st.sidebar.checkbox("私は18歳以上です。")
-    cap = st.sidebar.slider('BAIN SIZE', 0.5, 2, 3, 0.5)
+    cap = st.sidebar.slider('BAIN SIZE', 1, 2, 2, 1)
 
 
 
