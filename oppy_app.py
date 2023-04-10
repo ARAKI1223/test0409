@@ -43,7 +43,7 @@ def app_ver1():
     plt.ylim(-3,3)
     y = np.linspace(-3, 3, resolution)
     frames = []
-    num_frames = 36
+    num_frames = 40
     change_radian = np.pi*num_frames/360
     for i in range(num_frames):
         frame = plt.plot(x_set(i*change_radian, y, R18_flag, cap), y, color="black")
