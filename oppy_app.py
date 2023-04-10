@@ -34,7 +34,7 @@ def app_ver1():
     # num_frames =
     st.sidebar.text("あなたは18歳以上ですか？")
     R18_flag = st.sidebar.checkbox("私は18歳以上です。")
-    cap = st.sidebar.slider('BAIN SIZE', 1, 2, 2, 1)
+    cap = st.sidebar.slider('BAIN SIZE', 1, 2, 1, 1)
 
 
 
@@ -43,7 +43,7 @@ def app_ver1():
     frames = []
     num_frames = 31
     for i in range(num_frames):
-        frame = plt.plot(x_set(i*0.1, y, R18_flag), y, color="black")
+        frame = plt.plot(x_set(i*0.1, y, R18_flag, cap), y, color="black")
         frames.append(frame)
 
     # 描画
