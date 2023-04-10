@@ -14,10 +14,11 @@ def x_set(t, y, R18_flag, cap):
     # x3 = 0.2*(np.exp(-1*(y+1)**2)+1)/(1+np.exp(100*(y+1)+16*np.sin(t)))
     # x4 = 0.1/np.exp(2*(10*y+1.2*(2+np.sin(t))*np.sin(t))**4)
     cap /= 3
-    x1 = 1.5*cap*np.exp((0.12*np.sin(t)-0.5)*(y+0.16*np.sin(t))**2)/(1+np.exp(-20*(5*y+np.sin(t))))
-    x2 = cap*(1.5+0.8*(y+0.2*np.sin(t))**3)*(1+np.exp(20*(5*y+np.sin(t))))**(-1)/(1+np.exp(-1*(100*(y+1)+16*np.sin(t))))
-    x3 = 0.2*cap*(np.exp(-1*(y+1)**2)+1)/(1+np.exp(100*(y+1)+16*np.sin(t)))
-    x4 = 0.1/np.exp(2*(10*y+1.2*(2+np.sin(t))*np.sin(t))**4)
+    sint = np.sin(t)/cap
+    x1 = 1.5*cap*np.exp((0.12*sint-0.5)*(y+0.16*sint)**2)/(1+np.exp(-20*(5*y+sint)))
+    x2 = cap*(1.5+0.8*(y+0.2*sint)**3)*(1+np.exp(20*(5*y+sint)))**(-1)/(1+np.exp(-1*(100*(y+1)+16*sint)))
+    x3 = 0.2*cap*(np.exp(-1*(y+1)**2)+1)/(1+np.exp(100*(y+1)+16*sint))
+    x4 = 0.1/np.exp(2*(10*y+1.2*(2+sint)*sint)**4)
 
     if R18_flag:
         x = x1 + x2 + x3 + x4
@@ -30,7 +31,7 @@ def x_set(t, y, R18_flag, cap):
 def app_ver1():
     st.title('BAIN')
 
-    speed = st.sidebar.slider('BAIN SPEED', 0, 10, 5, 1)
+    speed = st.sidebar.slider('BAIN SPEED', 0, 6, 3, 1)
     resolution = st.sidebar.slider('解像度', 10, 200, 100, 10)
     # num_frames =
     st.sidebar.text("あなたは18歳以上ですか？")
