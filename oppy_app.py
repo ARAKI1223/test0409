@@ -38,10 +38,12 @@ def app_ver1():
     R18_flag = st.sidebar.checkbox("私は18歳以上です。")
     cap = st.sidebar.slider('BAIN SIZE', 1, 5, 3, 1)
 
-
+    #グラフの設定
     fig = plt.figure(figsize=(4,8))
     plt.xlim(0,3)
     plt.ylim(-3,3)
+    plt.tick_params(bottom=False, left=False)
+
     y = np.linspace(-3, 3, resolution)
     frames = []
     num_frames = 36
