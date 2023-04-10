@@ -39,8 +39,8 @@ def app_ver1():
 
 
     fig = plt.figure(figsize=(3,8))
-    fig.set_xlim(0,6)
-    fig.set_ylim(-3,3)
+    plt.xlim(0,6)
+    plt.ylim(-3,3)
     y = np.linspace(-3, 3, resolution)
     frames = []
     num_frames = 31
