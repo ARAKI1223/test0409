@@ -14,7 +14,7 @@ def x_set(t, y, R18_flag, cap):
     # x3 = 0.2*(np.exp(-1*(y+1)**2)+1)/(1+np.exp(100*(y+1)+16*np.sin(t)))
     # x4 = 0.1/np.exp(2*(10*y+1.2*(2+np.sin(t))*np.sin(t))**4)
     cap /= 3
-    sint = np.sin(t)/cap
+    sint = np.sin(t)*cap:while
     x1 = 1.5*cap*np.exp((0.12*sint-0.5)*(y+0.16*sint)**2)/(1+np.exp(-20*(5*y+sint)))
     x2 = cap*(1.5+0.8*(y+0.2*sint)**3)*(1+np.exp(20*(5*y+sint)))**(-1)/(1+np.exp(-1*(100*(y+1)+16*sint)))
     x3 = 0.2*cap*(np.exp(-1*(y+1)**2)+1)/(1+np.exp(100*(y+1)+16*sint))
