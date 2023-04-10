@@ -38,7 +38,7 @@ def app_ver1():
 
 
 
-    fig = plt.figure(figsize=(3,8))
+    fig = plt.figure(figsize=(4,4))
     plt.xlim(0,6)
     plt.ylim(-3,3)
     y = np.linspace(-3, 3, resolution)
