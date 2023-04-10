@@ -42,7 +42,7 @@ def app_ver1():
     fig = plt.figure(figsize=(4,8))
     plt.xlim(0,3)
     plt.ylim(-3,3)
-    plt.tick_params(bottom=False, left=False)
+    plt.tick_params(labelbottom=False, labelleft=False, bottom=False, left=False)
 
     y = np.linspace(-3, 3, resolution)
     frames = []
